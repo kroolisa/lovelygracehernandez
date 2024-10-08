@@ -191,7 +191,7 @@ body {
 }
 
 .skill-name {
-    width: 150px;
+    width: 200px;
     font-weight: bold;
     text-overflow: ellipsis;
     text-wrap: nowrap;
@@ -199,7 +199,7 @@ body {
 }
 
 .skill-bar {
-    flex: 1;
+    flex: 0.6;
     background-color: #ddd;
     border-radius: 5px;
     margin-left: 10px;
