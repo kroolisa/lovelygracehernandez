@@ -36,3 +36,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+window.addEventListener('scroll', function () {
+  let offset = window.pageYOffset;
+
+  elements.forEach((element) => {
+    let offset = ((window.pageYOffset) - element.offsetTop) * 0.8
+    element.style.backgroundPositionY = `${offset}px`;
+  });
+});
+
+const elements = document.querySelectorAll('#banner');
