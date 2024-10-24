@@ -59,11 +59,12 @@ body {
 /* BANNER STYLES */
 #banner {
     margin-top: 75px;
-    background: url('../images/banner-background.jpg') fixed no-repeat center center/cover;
+    background: url('../images/banner-background.jpg') no-repeat center center / cover;
     height: 600px;
     display: flex;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
 
 #banner .banner-contents {
