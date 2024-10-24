@@ -34,6 +34,30 @@ document.addEventListener("DOMContentLoaded", function () {
     fadeInSections.forEach(section => {
         observer.observe(section);
     });
+
+     // Get all skill level divs
+     const skillLevels = document.querySelectorAll('.skill-level');
+
+     skillLevels.forEach(skillLevel => {
+         // Extract the width percentage from the style
+         const widthPercentage = skillLevel.style.width;
+ 
+         // Create a label element to display the percentage
+         const percentageLabel = document.createElement('span');
+         percentageLabel.textContent = widthPercentage;
+         percentageLabel.style.position = 'absolute';
+         percentageLabel.style.left = '50%';
+         percentageLabel.style.top = '50%';
+         percentageLabel.style.transform = 'translate(-50%, -50%)';
+         percentageLabel.style.color = '#fff';
+         percentageLabel.style.fontSize = '.90em';
+ 
+         // Ensure the parent is positioned
+         skillLevel.parentElement.style.position = 'relative';
+ 
+         // Append the label inside the skill bar
+         skillLevel.appendChild(percentageLabel);
+     });
 });
 
 window.addEventListener('scroll', function () {
